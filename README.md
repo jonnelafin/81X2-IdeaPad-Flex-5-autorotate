@@ -1,13 +1,7 @@
 # 81X2-IdeaPad-Flex-5-autorotate
-# Files
-autorotate.py sets your display orientation to match the orientation provided by your accelometer **once**
+A small python script to enable autorotation on the Ideapad Flex 5, which is bugged on gnome as of version 41
 
-autorotate.sh uses ```watch``` to run the script every second (assumes autorotate.py is placed in ```~/scripts/autorotate.py```)
-
-autorotate_headless.sh starts the autorotate.sh script headlessly using tmux (assumes the autorotate.sh is placed in ```~/scripts/autorotate.sh```)
-
-gnome-randr.py is a modified version of [Oschowa/gnome-randr](https://gitlab.com/Oschowa/gnome-randr), allowing vertically mirrored orientations (holding the device upside-down)
-
+Only tested on wayland, on X11 the script could use randr instead of the included gnome-randr.py
 # Dependencies
 Linux Kernel 5.15 or greater is required to make the sensor work (alternately installing https://github.com/conqp/amd-sfh-hid-dkms could work).
 
@@ -28,3 +22,12 @@ associated physical monitors:
 no changes made
 ```
 If you see "undefined" instead of "normal", the sensor (or the driver) does not work.
+
+# Files
+autorotate.py sets your display orientation to match the orientation provided by your accelometer **once**
+
+autorotate.sh uses ```watch``` to run the script every second (assumes autorotate.py is placed in ```~/scripts/autorotate.py```)
+
+autorotate_headless.sh starts the autorotate.sh script headlessly using tmux (assumes the autorotate.sh is placed in ```~/scripts/autorotate.sh```)
+
+gnome-randr.py is a modified version of [Oschowa/gnome-randr](https://gitlab.com/Oschowa/gnome-randr), allowing vertically mirrored orientations (holding the device upside-down)
