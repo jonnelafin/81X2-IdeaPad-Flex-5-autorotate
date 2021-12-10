@@ -1,1 +1,1 @@
-tmux new-session -d ./scripts/autorotate.sh
+tmux new-session -d ~/scripts/autorotate.sh
