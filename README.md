@@ -24,7 +24,7 @@ no changes made
 If you see "undefined" instead of "normal", the sensor (or the driver) does not work.
 
 # Files
-autorotate.py sets your display orientation to match the orientation provided by your accelometer **once**
+autorotate.py sets your display orientation to match the orientation provided by your accelometer **once**. It assumes that your display is called "eDP-1", please change this to match your display, if it differs.
 
 autorotate.sh uses ```watch``` to run the script every second (assumes autorotate.py is placed in ```~/scripts/autorotate.py```)
 
